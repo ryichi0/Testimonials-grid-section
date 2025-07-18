@@ -1,0 +1,167 @@
+/* Variables*/
+:root{
+    /* Primary Colors */
+    --Purple-50: hsl(260, 100%, 95%);
+    --Purple-300: hsl(264, 82%, 80%);
+    --Purple-500: hsl(263, 55%, 52%);
+
+
+    /* Neutral Colors */
+    --White: hsl(0, 0%, 100%);
+    --Grey-100: hsl(214, 17%, 92%);
+    --Grey-200: hsl(0, 0%, 81%);
+    --Grey-400: hsl(224, 10%, 45%);
+    --Grey-500: hsl(217, 19%, 35%);
+    --Dark-blue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+
+    /* Typography */
+    --Font-family: 'Barlow Semi Condensed';
+    --Font-size-p: 13px;
+    --Font-size-h: 1.6rem;
+
+    --Font-weight-500: 500;
+    --Font-weight-600: 600;
+
+    --Line-height-q: 150%;
+}
+
+/* General Style */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 2rem;
+
+    font-family: var(--Font-family), sans-serif;
+
+    background-color: var(--Grey-100);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+
+    max-width: 1200px;
+}
+span{
+    display: block;
+    font-weight: var(--Font-weight-600);
+}
+img{
+    border-radius: 50%;
+    width: 38px;
+}
+h2{
+    font-family: inherit;
+    font-size: clamp(1.3rem, 3.5vw, var(--Font-size-h));
+    font-weight: var(--Font-weight-500);
+}
+q{
+    font-size: var(--Font-size-p);
+    line-height: var(--Line-height-q);
+    font-weight: var(--Font-weight-600);
+}
+
+/* Layout */
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+.bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+}
+div.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+/* Cards Position in Grid and its Colors */
+.daniel{
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+    background: var(--Purple-500) url(./assets/images/bg-pattern-quotation.svg) top right no-repeat;
+    background-position-x: 90%;
+    background-color: var(--Purple-500);
+
+    h2{
+        color: var(--Grey-100);
+    }
+    q, span, small{
+        color: var(--Purple-300);
+    }
+}
+.jonathan{
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    background-color: var(--Grey-500);
+
+    h2{
+        color: var(--Grey-100);
+    }
+    q, span, small{
+        color: var(--Grey-200);
+    }
+}
+.patrick{
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+    background-color: var(--Dark-blue);
+
+    h2, q, span, small{
+        color: var(--Grey-200);
+    }
+}
+.jeanette{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.kira{
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+.jeanette, .kira{
+    background-color: var(white);
+
+    h2{
+        color: var(--Grey-500);
+    }
+    q, span, small{
+        color: var(--Grey-400);
+    }
+}
+
+/* Media Query*/
+@media screen and (max-width:768px) {
+    main{
+        display: block;
+        grid-template-columns: 1;
+    }
+    .card{
+        margin-block-end: 2rem;
+    }
+       
+}
