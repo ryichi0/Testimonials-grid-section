@@ -2,8 +2,8 @@
 [Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 
 
-![desktop design](./assets/design/desktop-design.jpg)
-![mobile design](./assets/design/mobile-design.jpg)
+![desktop design](./design/desktop-design.jpg)
+![mobile design](./design/mobile-design.jpg)
 
 
 
